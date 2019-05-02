@@ -11,9 +11,11 @@ import (
 )
 
 func Dynamo_connect() *dynamo.DB {
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatal("Error loading .env file")
+	if os.Getenv("ENV") == "development" {
+		err := godotenv.Load()
+		if err != nil {
+			log.Fatal("Error loading .env file")
+		}
 	}
 
 	accessKey := os.Getenv("DYNAMO_DB_ACCESS_KEY")

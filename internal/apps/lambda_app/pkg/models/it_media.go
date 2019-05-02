@@ -3,7 +3,7 @@ package models
 import (
 	"encoding/xml"
 	"fmt"
-	"github.com/bb3104/sample_dynamodb/internal/apps/lambda_app/pkg/lib"
+	"github.com/bb3104/tuna/internal/apps/lambda_app/pkg/lib"
 	"time"
 )
 
